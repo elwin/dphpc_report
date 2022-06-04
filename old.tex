@@ -1,0 +1,58 @@
+
+% \begin{figure}[H]
+%     \center
+%     \begin{tikzpicture}[node distance=10mm and 10mm, square/.style={rectangle, draw=black!60, fill=black!5, very thick, minimum size=5mm}]
+%         %Nodes
+%         \node[square,label=below:$\color{red}\blacksquare\color{green}\blacksquare\color{blue}\blacksquare$] (b0)               {0};
+%         \node[square,label=below:$\color{red}\blacksquare\color{green}\blacksquare\color{blue}\blacksquare$] (b1) [right=of b0] {1};
+%         \node[square,label=below:$\color{red}\blacksquare\color{green}\blacksquare\color{blue}\blacksquare$] (b2) [right=of b1] {2};
+        
+%         \node[square,label=right:$\color{red}\blacksquare$] (t0) [above=of b0]      {0};
+%         \node[square,label=right:$\color{green}\blacksquare$] (t1) [right=of t0]    {1};
+%         \node[square,label=right:$\color{blue}\blacksquare$] (t2) [right=of t1]     {2};
+        
+%         %Lines
+%         \draw[->] (t0) -- (b0);
+%         \draw[->] (t0) -- (b1);
+%         \draw[->] (t0) -- (b2);
+        
+%         \draw[->] (t1) -- (b0);
+%         \draw[->] (t1) -- (b1);
+%         \draw[->] (t1) -- (b2);
+        
+%         \draw[->] (t2) -- (b0);
+%         \draw[->] (t2) -- (b1);
+%         \draw[->] (t2) -- (b2);
+%     \end{tikzpicture}
+%     \caption{Illustration of an allgather operation}
+%     \label{fig:allgather}
+% \end{figure}
+
+% \verb|allreduce| also collects all data but aggregates it using some user-defined operation and stores the aggregation result on each node.
+
+% \begin{figure}[H]
+%     \center
+%     \begin{tikzpicture}[node distance=5mm and 10mm, square/.style={rectangle, draw=black!60, fill=black!5, very thick, minimum size=5mm}]
+%         %Nodes
+%         \node[square,label=right:$\color{red}\blacksquare$]     (t0)                {0};
+%         \node[square,label=right:$\color{green}\blacksquare$]   (t1) [right=of t0]  {1};
+%         \node[square,label=right:$\color{blue}\blacksquare$]    (t2) [right=of t1]  {2};
+        
+%         \node[square] (aggregate) [below=of t1] {REDUCE};
+        
+%         \node[square,label=below:$\color{brown}\blacksquare\color{brown}\blacksquare\color{brown}\blacksquare$] (b1) [below=of aggregate]   {1};
+%         \node[square,label=below:$\color{brown}\blacksquare\color{brown}\blacksquare\color{brown}\blacksquare$] (b0) [left=of b1]           {0};
+%         \node[square,label=below:$\color{brown}\blacksquare\color{brown}\blacksquare\color{brown}\blacksquare$] (b2) [right=of b1]          {2};
+        
+%         %Lines
+%         \draw[->] (t0) -- (aggregate);
+%         \draw[->] (t1) -- (aggregate);
+%         \draw[->] (t2) -- (aggregate);
+        
+%         \draw[->] (aggregate) -- (b0);
+%         \draw[->] (aggregate) -- (b1);
+%         \draw[->] (aggregate) -- (b2);
+%     \end{tikzpicture}
+%     \caption{Illustration of an allreduce operation}
+%     \label{fig:allreduce}
+% \end{figure}
